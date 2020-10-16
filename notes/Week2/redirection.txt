@@ -1,0 +1,66 @@
+
+Processes, ctd:
+
+Running programs are called processes in the OS.
+
+OS will set up "memory space" for each process
+
+Each process has its own set of files that are open for reading/writing.
+
+Three standard files for each process:
+
+  standard input: This is like "System.in" in Java
+                  default place for reading input
+                  Usually from the terminal
+
+  standard output: This is like "System.out" in Java
+                    default place for writing output
+                    Usually goes to the terminal
+
+  standard error: This is like "System.err" in Java
+                    default place for writing error messages
+                    Usually goes to the terminal
+
+
+But in UNIX and command line in general, the shell can redirect where
+standard input, output, error go/come from
+
+To send standard ouput to a file:
+
+ # cmd arg arg   > file.txt
+
+This will send output of "cmd" to file.txt
+
+
+To send a file into standard input:
+
+ # cmd arg arg arg < file.txt
+
+This will send contents of file.txt as input (standard input) of cmd
+
+
+ # cmd arg arg arg 2> errors.txt
+
+
+For all 3:
+
+  # cmd arg arg arg arg < input.txt > output.txt 2> error.txt
+
+
+To append standard ouput to a file:
+
+  # cmd arg arg arg >> output.txt
+
+
+The super cool thing that shells do that's related somewhat to redirection
+kind of:
+
+PIPES
+
+
+#  cmd1 arg arg arg | cmd2 arg aarg arg
+
+This runs cmd1 and cmd2 at the same time
+and connects standard output of cmd1 to standard input of cmd2.
+
+

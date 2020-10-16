@@ -1,0 +1,203 @@
+
+C language ctd
+============================================================
+
+casting:
+  
+  to change the type of an expression in C:
+
+    (new type name) expr
+
+  So for example:
+
+    double pi = 3.1415926538;
+
+    int intpi = (int) pi;
+
+
+In C we can cast things that really shouldn't be cast.
+
+  double pi = 3.14159;
+
+  char* foo = (char*) &pi;
+
+  // foo acts like a pointer to a char but in reality the pointer
+  // is to a double!
+
+
+Statements in C
+============================================================
+
+Short story: same as Java
+
+* Any expression followed by ; is a statement.
+
+      printf("Hello, world!\n");
+      x++;
+      y = x;
+      3+7;
+
+   All of these will have values, but C lets you ignore the values.
+
+* The expressions do not need to be type "void"
+
+* Statements may be grouped with braces { }
+
+Flow control:
+
+** if then else **
+
+
+  if (cond) 
+    stmt;
+  else
+    stmt;
+
+  if (cond) 
+  {
+    stmt1;
+    stmt2;
+  }
+
+
+** while loops **
+
+  /* Zero or more executions */
+
+  while (cond) 
+  {
+    stmt;
+    stmt;
+  }
+
+** do-while **
+
+  /* one or more executions */
+
+  do {
+    stmts;
+  } while (cond);
+
+
+** for loops **
+
+  for ( initializations ;  condition ;  update )
+  {
+  }
+
+
+  /* An infinite loop: */
+
+  for ( printf("Hello!\n") ;; let's put the whole loop here! );
+
+
+  for (i=0; i<n; i++) {
+    sum += A[i];
+  }
+
+
+But remember: no booleans in C
+
+  so in C we can put any expression we like (any type)
+  and the meaning is "zero means false and non-zero means true"
+
+
+Here's an example:
+
+  /* Approximate log_2 of N by dividing N by 2 and count */
+
+  int count = -1;
+  while (N) {
+    N /= 2;
+    count++;
+  }
+
+  /* Or a for loop: */
+
+  for (count=-1; N; N/=2, count++);
+
+
+
+Some things to watch out for:
+
+
+  int n;
+  printf("Enter the value for n:\n");
+  scanf("%d", &n);
+
+  if (n = 42) {   
+    printf("You typed the answer to the meaning of life\n");
+  } else {
+    printf("Normal value\n");
+  }
+
+  /* ^^^ Legal but probably you meant "n == 42" */
+
+  if (42 == n)  /* This will prevent that kind of typo error */
+
+
+/* Another example */
+
+  int a, b;
+  printf("Enter (a,b):\n");
+  scanf("(%d,%d)", &a, &b);
+  
+  if ( a & b ) {
+    printf("Product is %d\n", a*b);
+  } else {
+    printf("Product is 0\n");
+  }
+
+
+  /*  Oops though we should have used a && b */
+
+
+
+switch (integer expression) {
+  case constval:    stmt; 
+                    stmt;
+                    break;    /* If you forget this, it will keep going! */
+
+  case constval2:   stmt;
+                    stmt;
+
+
+  default:      stmt;   /* anything not listed above */
+            
+};
+
+
+
+** break ** : break out of the inner-most switch, or loop
+
+** continue** : go to next iteration of the loop
+
+for (;;) {
+
+  /* do stuff */
+  if (something) continue;
+
+  if (cond) break;
+
+  /* Do more stuff */
+}
+
+
+Here's a fun example with switch:
+
+int sum = 0;
+
+switch (arraySize) {
+  case 4: sum += A[3];
+  case 3: sum += A[2];
+  case 2: sum += A[1];
+  case 1: sum += A[0];
+  case 0: break;
+  default:  printf("Array too large!\n");
+};
+
+
+C has goto statements.  Never use them.
+
+
+

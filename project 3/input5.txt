@@ -1,0 +1,16 @@
+#
+# winable Not winnable in any number of moves
+#
+RULES : turn 1 unlimited
+FOUNDATIONS : 2 c Ad 2 h 4 s
+TABLEAU :
+6 h 2 d | Ts
+Qd 8 s 3 h | Kc Qh Js Td 9 c 8 h 7 c 6 d 5 c 4 h
+Jd Jc 9 s | 8 d
+8 c 3 c 9 d | Kh Qc
+7 s | Th
+| Kd Qs Jh Tc 9 h
+| 6 s 5 h 4 c 3 d
+STOCK :
+| 5 d 7 h Ks 4 d 7 d 6 c 5 s
+MOVES :

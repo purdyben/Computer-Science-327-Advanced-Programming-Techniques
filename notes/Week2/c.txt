@@ -1,0 +1,146 @@
+
+Why C?
+
+(1) Jobs?
+
+(2) Legacy C code
+
+(3) System stuff is usually written in C
+    Linux kernel: millions of lines of C (plus assembly)
+    Device drivers
+    Windows kernel: C, C++, assembly
+
+(4) Techniques are still useful
+    C/C++ requires you to know some things that Java does for you
+
+(5) C/C++ are still reasonable choices for projects
+    especially: speed, memory is a concern
+                or network/system stuff
+
+
+Java code:
+  compile
+  runs on java virtual machine
+
+C:
+  compile
+  get an executable just for that machine
+  no virtual machine sitting in between
+
+
+Brief history of C
+------------------------------------------------------------
+
+1969: Ken Thompson wrote UNIX
+        in assembly
+        on a PDP-7 computer
+          18-bit CPU
+          RAM: 4k - 64k 
+
+
+Thompson wanted a language for system programming
+  * Started with BCPL
+  * Stripped it down, called it B
+  * B wasn't quite enough
+
+Dennis Ritchie joined project
+  * Took B, added types, other features, called it C
+
+C, Unix were developed simultaneously
+
+
+Philosophy of C:
+------------------------------------------------------------
+Programmers are extremely concerned about speed and memory efficiency
+
+Programmers often need to manipulate bits directly
+
+Overall C philosophy:
+  The programmer is always right.
+
+Another one:
+  No feature should be added to C if it causes a speed or memory
+  penalty for programmers who do not use that feature.
+
+By today's standard, C is a minimalist language
+
+C at the time was very modern:
+  * flow control
+  * user-defined procedures / functions
+  * user-defined (basic) data structures 
+  * economy of expression
+  * easy to compile into efficient machine language
+
+
+There is almost no runtime checking in C
+
+  int x[10];
+  x[30] = 42;
+
+This will do one of 3 things:
+
+(1) program runs just fine, no errors
+(2) program runs fine, but bizarre error later
+(3) Segmentation fault
+
+Which of these 3 might depend on:
+  * which system you're on
+  * which compiler you're using
+  * what was the input to the program
+  * was it time #3 or time #4 that I ran the program
+
+
+Versions of C
+------------------------------------------------------------
+
+1978: Kernighan and Ritchie C book published 
+
+1989: C language standardized by ANSI
+      known as ANSI C or C89/C90
+
+1999: updated, called C99
+
+2011: updated, called C11
+
+
+Different compilers will have non-standard features
+
+  int x[n];   /* gcc lets me do this at one point in my life */
+
+
+This also makes porting difficult.
+
+
+
+
+Differences between C and Java
+------------------------------------------------------------
+
+* operators and syntax is very similar
+  but beware of some differences
+
+* both: programs are free-form text files
+
+* Java: compiles to bytecode
+        and runs on a JVM
+
+* C: compiles to assembly/ML
+      and runs as its own process
+
+Some Java features you should forget about until C++:
+
+  * type safety
+    C has types but we can totally clobber them
+
+  * bound checking for arrays
+
+  * garbage collection
+    clean up your own mess!
+
+  * objects (except for structs that are like bare bones objects)
+    C programs are like a Java program with one object,
+    everything static (methods and members)
+
+  * exceptions
+
+

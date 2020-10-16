@@ -1,0 +1,117 @@
+
+I/O in C
+----------------------------------------------------------------------
+
+This is a brief discussion of some functions in stdio.h
+
+All of these live in "man 3" so we can look at the man pages.
+
+How to read/write to a file in C
+
+(1) Declare a variable of type FILE*
+
+(2) To open a file use:
+
+      fopen("filename", mode)
+
+        mode includes one of
+          "r" to read the file
+          "w" to write the file
+          "a" to append a file
+        might contain:
+          "b" for binary, not sure if this ever needed in UNIX.
+
+
+      Will return a pointer to this FILE Thing, unless
+      we couldn't open the file, in which case we get a 0 pointer.
+
+      This means we can do things like
+
+      FILE* infile = fopen("myfile", "r");
+      if (!infile) {
+        /* We get here only if infile is 0 */
+        printf("No such file\n");
+      }
+
+
+(3)   Use any of the functions that take a FILE* to read/write the file
+        you may intermix these functions
+
+(4)   close the file using
+    
+        fclose( put a FILE* here );
+
+
+Notes:
+
+  All I/O is buffered, so things like "grab a character" are not as
+  inefficient as they sound.
+  Also means, program crashes might cause buffered I/O to not appear.
+
+
+Reading from a file:
+
+  fscanf(FILE* infile, "format string", &stuff, &to, &read, &in);
+
+      Does a "scanf" but reads from infile
+
+          "%d": integer
+          "%f": float
+          "%u": unsigned
+          "%s": string
+
+          "%3d": 3 digit integer
+
+          "%03d": 3 digits and put 0's in front as needed
+
+  
+  fgetc(FILE*)    : reads and returns the next character, as an INTEGER!
+
+  fgets(char array[], size, FILE*)    : read into a string, safely!
+
+  fread: read a chunk of file into a chunk of memory
+
+  feof(FILE*) : returns true if we're at the end of the file.
+
+  
+
+SUPER USEFUL:
+
+  ungetc(int c, FILE*): puts a character back (undoes an fgetc)
+      Notes: can put back a different character
+             only guaranteed to work for 1 character put back
+             this modifies the BUFFER, not the actual file.
+
+
+OUTPUT ones:
+
+  fprintf(FILE*, "format string", items, items);
+      the reverse of fscanf
+
+  fputc: write one character to the file
+
+  fputs: write a string to the file
+
+  fwrite: write a chunk of memory to the file
+
+
+Check your man pages for more details!
+
+
+In C we get the standard 3 files already declared as global FILE* vars
+that you probably should not fclose and definitely not fopen.
+
+  stdin: standard input
+  stdout: standard ouput
+  stderr: standard error
+
+  printf("thing") = fprintf(stdout, "thing");
+
+  scanf("thing") = fscanf(stdin, "thing");
+
+
+Now examples!
+
+
+
+

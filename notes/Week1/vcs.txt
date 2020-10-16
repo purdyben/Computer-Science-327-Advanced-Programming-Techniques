@@ -1,0 +1,179 @@
+Version control systems
+
+Thought experiment:
+
+  How do you manage different versions of software you are developing?
+
+  project.java
+  project.v1.java
+  project-working.java
+  project-broken.java
+
+Problems with this approach:
+  * clutters working directory
+  * error prone
+  * worse with more than one source file because you need to
+    synchronize them all together
+
+Better? approach:  Keep a snapshot of the folder e.g.
+
+  Project1/
+  Project1-working/
+  Project1-broken/
+
+Problems:
+  * fixes "synchronization" issues but that's it
+  * useless duplication of files that didn't change
+  * what about fixing errors?  Do this in all subdirectories "by hand"
+
+
+Next best approach:
+  Keep a snapshot in separate directories
+  write utility scripts to manage the snapshots
+
+Good news: someone has already done this for you, so you just need to
+learn how to use it.
+
+
+Version control systems:
+------------------------------------------------------------
+Idea:
+  * Repository sits off somewhere and you don't know or care
+    how stuff is stored in the repository
+
+  * You have a local "working copy" of the source
+    (normally - an entire directory and everything below it)
+
+  * You can periodically take "snapshots" of your source
+    and store the snapshots in the repository
+
+  * You can easily go back to any previous snapshot
+
+  * In practice - repository is very clever about storing snapshots
+    (e.g., only differences between text files)
+
+What should NOT go into the repository?
+  If file A is built automatically from file B,
+  and file B is in the repository, then DO NOT put file A in the repository.
+
+
+But wait there's more!!!!!
+
+Normally we think of "linear" development:
+
+ *--------------*-----------*-----------*--*--*-------------*
+ initial       v1          v1.2        v1.3 1.3.1 1.3.2     v2
+
+
+Most VCSs allow us to create "branches"
+
+ *--------------*-----------*-----------*--*--*-------------*
+ initial       v1            \         v1.3 1.3.1 1.3.2     v2
+                              \                            /
+                               \                          /
+                                \                        /
+                                 *----*----------*------*
+                                 branch for attempting a major change
+                                 like "linked list implementation"
+
+The beauty of VCSs: we can create branches.
+we can merge branches.  we can migrate changes between branches.
+
+E.g.:
+  we can migrate a bugfix from a branch to the "main trunk"
+  we can put a quick bugfix in the main trunk and migrate to the branch
+
+
+But the absolute best use of VCSs is for remote repositories.
+
+With this:
+  There's a server that holds the repository
+  Each user/device can have its own working copy.
+  
+What about:
+  Alice changes foo.c and Chuck changes foo.c and then they
+  send their changes to the repository.
+
+This MIGHT cause a conflict:
+  If different files, or far enough apart changes in the same file,
+  usually the VCS can handle this with no problems.
+
+  Otherwise a human must resolve the conflict.
+
+
+Popular VCS's
+----------------------------------------------------------------------
+Subversion: 
+  replacement for CVS which was a replacement for RCS
+
+Git:
+  developed by Linus Torvalds for use with Linux development
+
+
+Git:
+  Snapshots are called "commits"
+
+  Philosophy:   disk is cheap.  Network is not.
+
+When you check out ("clone") a repository, you get an entire copy of it
+
+Benefits:
+  * we have entire history of commits
+  * we can create branches locally
+  * we can create snapshots locally
+  * we control what and when we synchronize with remote servers
+  * we can have zero or more remote repositories
+  * we can control what goes into a snapshot
+
+
+GIT CHEAT SHEET
+----------------------------------------------------------------------
+
+git clone (url) (destination)
+  Create a copy of the git repo hosted at url, into destination directory
+  i.e., give you your own local copy
+  Do this once (usually)
+
+
+git push
+  Send my local git repo changes to the remote one
+
+git pull
+  Grab any changes on remote git repo and merge them with mine
+
+
+How to make "snapshots":
+
+git add (file)
+  Add the given file to the staging area (get it ready for a commit)
+
+git commit
+  Take a snapshot
+  Everything in the staging area becomes the next commit, and updates
+  the repository accordingly.
+
+
+How to switch between "snapshots" or commits
+
+git checkout (name of a commit)
+
+  Make the working copy consistent with the specified commit (i.e., snapshot)
+
+
+git status
+  Show information about current commit and what's changed, what's in
+  staging area, etc.
+
+
+git diff
+  Show differences between commits or since last commit
+
+
+git tag (tag name)
+  Assigns a name to a commit but only locally
+  Then usually you would do
+  git push origin (tag name)
+  to send the tag to the server.
+
+
+

@@ -1,0 +1,132 @@
+
+./winnable -m 4 testwin1.txt
+./winnable -m 6 testwin1.txt
+./winnable -m 8 testwin2.txt
+./winnable -v -m 7 testwin2.txt
+./winnable -m 11 -v testwin3.txt
+./winnable -c -m 11 -v testwin3.txt
+./winnable -c -v -m 15 testwin4.txt
+./winnable -f -c -v -m 20 testwin4.txt
+
+________________________________________________________________________________________
+./winnable -m 4 testwin1.txt
+
+then the output should be
+
+# Game is not winnable within 4 moves
+________________________________________________________________________________________
+./winnable -m 6 testwin1.txt
+then the output could be
+
+# Winnable in 6 moves :
+5 - > f
+.
+w - >3
+.
+.
+w - >3
+________________________________________________________________________________________
+./winnable -m 8 testwin2.txt
+
+then the output could be
+
+# Winnable in 8 moves :
+7->f 6->4 6->f 1->7 1->f 1->f 7->1 7->3
+________________________________________________________________________________________
+./winnable -v -m 7 testwin2.txt
+
+then the output could be
+
+Using DFS search
+1 ,000 ,000 configurations checked so far
+1 ,535 ,072 configurations checked .
+# Game is not winnable within 7 moves
+
+________________________________________________________________________________________
+./winnable -m 11 -v testwin3.txt
+
+then the output could be:
+
+Using DFS search
+1 ,000 ,000 configurations checked so far
+2 ,000 ,000 configurations checked so far
+3 ,000 ,000 configurations checked so far
+4 ,000 ,000 configurations checked so far
+5 ,000 ,000 configurations checked so far
+6 ,000 ,000 configurations checked so far
+7 ,000 ,000 configurations checked so far
+8 ,000 ,000 configurations checked so far
+9 ,000 ,000 configurations checked so far
+10 ,000 ,000 configurations checked so far
+11 ,000 ,000 configurations checked so far
+12 ,000 ,000 configurations checked so far
+12 ,207 ,830 configurations checked .
+# Game is not winnable within 11 moves
+
+________________________________________________________________________________________
+./winnable -c -m 11 -v testwin3.txt
+
+could instead produce the output:
+
+Using DFS search
+377 configurations checked .
+Cache had 144 entries .
+# Game is not winnable within 11 moves
+
+________________________________________________________________________________________
+./winnable -c -v -m 15 testwin4.txt
+
+could produce output:
+
+Using DFS search
+1 ,000 ,000 configurations checked so far
+1 ,165 ,094 configurations checked .
+Cache had 717984 entries .
+# Winnable in 15 moves :
+.
+r
+.
+w - >1
+.
+w - > f
+.
+w - >3
+7 - >3
+7 - >4
+.
+w - >3
+.
+.
+w - >3
+_______________________________________________________________________________________
+./winnable -f -c -v -m 20 testwin4.txt
+
+could instead produce the output:
+
+Using DFS search
+392 ,569 configurations checked .
+Cache had 177676 entries .
+# Winnable in 20 moves :
+5 - > f
+5 - > f
+2 - > f
+5 - > f
+4 - > f
+.
+r
+.
+w - >1
+.
+w - > f
+.
+w - >3
+7 - >3
+.
+w - >3
+.
+.
+w - >3
+7 - > f
+________________________________________________________________________________________
+
+________________________________________________________________________________________

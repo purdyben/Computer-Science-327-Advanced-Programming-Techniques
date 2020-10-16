@@ -1,0 +1,134 @@
+
+
+Course: ComS 327
+Term  : Spring 2020
+
+|               Tuesday                |               Thursday               |
++--------------------------------------+--------------------------------------+
+|#01                              01/14|#02                              01/16|
+|                                      |                                      |
+|  Syllabus.  Version control systems. |  git primer ctd.  Unix primer        |
+|  git primer.                         |  (shell; man; cd, pwd, mkdir, rmdir; |
+|                                      |  cp, mv, rm; cat, less, view).       |
+|                                      |                                      |
++--------------------------------------+--------------------------------------+
+|#03                              01/21|#04                              01/23|
+|                                      |                                      |
+|  Redirection and pipes.  History and |  Structs.  Typedefs.  Pointers.      |
+|  Philosophy of C.  Quick comparison  |  Arrays.  Operators.                 |
+|  to Java, including compile          |                                      |
+|  difference.  Some simple C          |                                      |
+|  programs.  C language summary.      |                                      |
+|  Simple types.                       |                                      |
+|                                      |                                      |
++--------------------------------------+--------------------------------------+
+|#05                              01/28|#06                              01/30|
+|                                      |                                      |
+|  Statements.  Overview of stdio.h.   |  Functions.  Prototypes.  How to     |
+|  stdin, stdout, stderr.  File copy   |  pass by reference.  Wimpy parsing   |
+|  example.                            |  example.  Splitting input.          |
+|                                      |  Compiler stages.  Code splitting    |
+|                                      |  example.  Using libraries.  Make.   |
+|                                      |                                      |
++--------------------------------------+--------------------------------------+
+|#07                              02/04|#08                              02/06|
+|                                      |                                      |
+|  Array initialization.  Arrays and   |  Write a few more string functions.  |
+|  pointer arithmetic.  Strings in C.  |  Useful stuff in <string.h>.         |
+|  Write a few string functions.       |  Command line arguments.  Generic    |
+|                                      |  pointers (void*).                   |
+|                                      |                                      |
++--------------------------------------+--------------------------------------+
+|#09                              02/11|#10                              02/13|
+|                                      |                                      |
+|  Review Hw3.  Dynamic memory.        |  Complete linked list stack example. |
+|  malloc and free.  sizeof.  void*.   |  Heap memory.  Rough idea of how     |
+|  Dynamic arrays.                     |  malloc/free works.  Corrupted       |
+|                                      |  heaps.                              |
+|                                      |                                      |
++--------------------------------------+--------------------------------------+
+|#11                              02/18|#12                              02/20|
+|                                      |                                      |
+|  Scoping rules (review) and the      |  Function pointers.  Flexible arrays |
+|  runtime stack.  Function call       |  in structs (C99).  va_lists.        |
+|  lifetime and pointers that violate  |                                      |
+|  them.  Static variables.  Other     |                                      |
+|  horrible things in C.  Enums.  Bit  |                                      |
+|  fields.  Unions.                    |                                      |
+|                                      |                                      |
++--------------------------------------+--------------------------------------+
+|#13                              02/25|#14                              02/27|
+|                                      |                                      |
+|  Review Hw4.  va_lists.              |  Review for midterm.                 |
+|                                      |                                      |
++--------------------------------------+--------------------------------------+
+|#15                              03/03|#16                              03/05|
+|                                      |                                      |
+|  Midterm exam                        |  Go over midterm exam.  Memory       |
+|                                      |  management intro.  Easy case:       |
+|                                      |  exactly one owner.                  |
+|                                      |                                      |
++--------------------------------------+--------------------------------------+
+|#17                              03/10|#18                              03/12|
+|                                      |                                      |
+|  Hard case: more than one owner.     |  Mark and compact.  Overview of C++. |
+|  Garbage collection.  Reference      |  Philosophy and goals of C++.  Small |
+|  counting.  Mark and sweep.          |  changes in C++ from C.              |
+|                                      |                                      |
++--------------------------------------+--------------------------------------+
+|                                      |                                      |
+|                                      |                                      |
++--------------------------------------+--------------------------------------+
+|#19                              03/24|#20                              03/26|
+|                                      |                                      |
+|  Big differences from C to C++ (tour |  Namespaces.  Exceptions.  Inlined   |
+|  of C++).  I/O.  Consts.             |  functions.  Templates.  Compiling   |
+|  References.  Classes.  Overloading. |  C++.  Stream I/O.  File copy using  |
+|  New & delete.                       |  streams.                            |
+|                                      |                                      |
++--------------------------------------+--------------------------------------+
+|#21                              03/31|#22                              04/02|
+|                                      |                                      |
+|  Const.  With references.  With      |  Objects that manage their own       |
+|  pointers.  With objects.  Const     |  memory.  (Running example: array of |
+|  member functions.  References       |  integers.)  Destructors.            |
+|  within a class.                     |  New/delete vs malloc/free.          |
+|                                      |  New/delete for arrays.  Operator    |
+|                                      |  overloading.                        |
+|                                      |                                      |
++--------------------------------------+--------------------------------------+
+|#23                              04/07|#24                              04/09|
+|                                      |                                      |
+|  Overloading =.  Copy constructor.   |  C++ Leftovers: this, inner classes, |
+|  C++ Leftovers: friends, static.     |  namespaces.  Project part 4 and     |
+|                                      |  TermBox primer.                     |
+|                                      |                                      |
++--------------------------------------+--------------------------------------+
+|#25                              04/14|#26                              04/16|
+|                                      |                                      |
+|  Inheritance and polymorphism in     |  Abstract methods and classes in     |
+|  C++.                                |  C++.  How do virtual functions      |
+|                                      |  work?  vtable.  Slicing example     |
+|                                      |  with memory dump.  Templates.       |
+|                                      |  Template functions.  Template       |
+|                                      |  members.  Template classes.         |
+|                                      |  Templates with int or bool          |
+|                                      |  parameters.                         |
+|                                      |                                      |
++--------------------------------------+--------------------------------------+
+|#27                              04/21|#28                              04/23|
+|                                      |                                      |
+|  Template specialization.  Long      |  Static cast vs. dynamic cast.       |
+|  example: generic containers (singly-|  Casting references.  Generics with  |
+|  linked list).  Iterators in C++.    |  unions and/or void pointers.  Some  |
+|  Fun with template compiler errors.  |  random C++ features.  auto          |
+|  Standard Template Library.  Other   |  variables.  range-based for loops.  |
+|  ways to do generics?  Polymorphism. |  function and method pointers.       |
+|                                      |                                      |
+|                                      |                                      |
++--------------------------------------+--------------------------------------+
+|#29                              04/28|#30                              04/30|
+|                                      |                                      |
+|  Review old homeworks.               |                                      |
+|                                      |                                      |
++--------------------------------------+--------------------------------------+

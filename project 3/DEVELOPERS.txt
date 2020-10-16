@@ -1,0 +1,59 @@
+parsing 
+-------------------------------------------------------------------------------
+char get_Next_Char(FILE* inf);
+int hash_card(char rank, char suit);
+char check_rules(char c);
+char check_founcations(char c);
+char check_table(char c);
+char check_stock(char c);
+char get_founcations(FILE* inf, game_state *st);
+char get_rules(FILE* inf, rules *r);
+char get_table(FILE* inf, game_state *st);
+char get_stock(FILE* inf, game_state *st);
+int suit_Hierarchy(char suit);
+int rank_Hierarchy(char rank);
+char parse_file(FILE* inf, rules *r, game_state * st);
+void get_Colon(FILE* inf);
+char* get_card(int hash_card);
+
+Print
+-------------------------------------------------------------------------------
+void print_std(FILE *file_out, int number_moves, game_state *state,rules *r); 
+
+DFS 
+-------------------------------------------------------------------------------
+void DFS(game_state *state,rules *r, int max_number, int v, int c);
+int DFSUtil(game_state *state, rules *r, int move_num,int max_number, int *depth, int can_referesh_stock, int v, int c);
+int DFS_table(game_state *state,rules *r, int move_num, int max_number, int *depth, int can_referesh_stock, int v, int c);
+int DFS_stock(game_state *state,rules *r, int move_num,int Max_number, int *depth, int can_referesh_stock, int v, int c);
+
+DFS helper 
+-------------------------------------------------------------------------------
+int check_stock_to_foundations(game_state *state);
+int check_stock_to_table(game_state *state);
+
+void print_std(FILE *file_out, int number_moves, game_state *state,rules *r); 
+
+int check_opposite_suits(char s1, char s2);
+int check_flip_card(game_state *state);
+int check_flip_stock(game_state *state);
+int compress_stock(game_state *st);
+
+void reset_stock_index(game_state *state);
+void reset_table_index(game_state *state, int row);
+
+int check_card_and_table(char *c1, char *c2);
+int check_game(game_state *state);
+game_state* copy_game_state(game_state *st);
+
+move methods
+-------------------------------------------------------------------------------
+int table_card_to_foundation_card(char* t1, char *f2);
+void move_t_to_t(game_state *state, int src_row, int src_col, int des_row, int des_col);
+int check_tc_to_tc(char *t1, char *t2);
+void add_c_to_move_set(game_state *state, char move);
+
+hash methods 
+-------------------------------------------------------------------------------
+int hash_table(game_state *state);
+int check_hash_table(long n, int x);

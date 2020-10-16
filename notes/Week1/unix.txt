@@ -1,0 +1,131 @@
+
+UNIX PRIMER
+----------------------------------------------------------------------
+
+UNIX has GUIs but that's not the point here.
+
+This lecture is about "command line" more specifically "shells"
+
+
+What is a shell?
+
+  A program to parse and execute commands.
+  Written in C.  Nothing magic.  Write your own for fun and profit.
+
+
+  Typically interactive:
+    get prompt
+    type command
+    get prompt back when command is done.
+
+    Prompts usually can be changed, we write #
+
+    Commands look like this:
+      # cmd arg1 arg2 arg3 ... argn
+
+        ^ cmd will be either:
+              built-in to the shell (known to the shell)
+              it's a program that live somewhere and shell runs it
+
+        What about args?
+          Number of args, meaning of args, etc depends on what command.
+
+
+    Note: DOS does this too but commands are different from UNIX
+
+
+Some critical must know UNIX "commands"
+============================================================
+
+man: Shows manual pages
+
+     # man (command) 
+    
+     for example:
+
+       The manuals are divided into sections
+
+       Sometimes want to limit search to a particular section.
+
+       Section 1: general commands like man
+       Section 2: system calls (advanced C functions)
+       Section 3: C library functions
+
+
+
+Shells have a concept of "working directory"
+    (directory = folder)
+
+**pwd** : print working directory
+
+To specify a filename (pathname)
+
+(1) Absolute pathname
+      Start with "/"
+      Gives the complete pathname starting from the root of the filesystem
+      tree until the file/dir
+
+(2) Relative pathname
+      Does NOT start with /
+      Relative to shell's working directory
+      Equivalent to absolute pathname given by:
+        (working directory)/(relative name)
+
+**cd**: change working directory
+
+      cd (absolute or relative pathname)
+      cd 
+
+"special" directories:
+  . : current directory   (can go in the middle of a pathname)
+  ..: parent directory
+
+  ~:  your home directory (shell only)
+
+  ~alice: alice's home directory
+
+
+
+**ls**: list items in current directory
+
+        -l: long listing
+
+**cp**: copy files
+        cp source destination     : create one copy
+        cp (list of source files) destination-directory  : copy lots of files
+
+**mv**: move files
+        mv source destination     : rename one file
+        mv (list) (destination dir) : rename lots of files
+
+**rm**: remove files
+        rm list files to be removed
+
+**mkdir**: create directory
+
+**rmdir**: remove an empty directory
+
+**cat**: catenate files
+          cat (list files)
+
+**less**: view a file but we can scroll using arrows etc
+          less (file)
+
+**view**: view a file but use vi commands
+
+**ssh**: remote login
+
+
+============================================================
+
+Processes:
+
+  Just the name for a running program in UNIX (also windows)
+  
+  * The OS will set aside memory space for the process (program)
+    The memory is set up so that the process CANNOT read/write/execute
+    outside of its memory space.
+    Get a "bus error" or "segmentation fault"
+  
+  * Each process gets its own list of open files to read/write from
+

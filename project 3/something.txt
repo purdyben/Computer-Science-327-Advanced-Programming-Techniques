@@ -1,0 +1,19 @@
+RULES :
+turn 1
+unlimited
+FOUNDATIONS :
+Kc
+K d
+Q h
+Q s
+TABLEAU :
+|
+|
+|
+|
+| Kh
+|
+| 
+STOCK :
+Ks|
+MOVES :

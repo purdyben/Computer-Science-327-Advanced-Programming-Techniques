@@ -1,0 +1,5 @@
+Querying intbox: 6
+4: NO
+5: NO
+6: YES
+7: NO

@@ -1,0 +1,13 @@
+Querying intbox: {[1, 2], {5, {[11, 17], {7, 9}, 6}, [22, 33], {}}, 77}
+1: YES
+2: YES
+3: NO
+4: NO
+5: YES
+6: YES
+7: YES
+8: NO
+9: YES
+10: NO
+11: YES
+12: YES

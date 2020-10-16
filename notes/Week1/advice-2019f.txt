@@ -1,0 +1,350 @@
+Answers given to final exam extra credit question:
+"What advice would you give to students taking this class,
+at the beginning of the semester?"
+
+------------------------------------------------------------
+
+Always start project early.  For real.
+
+Ask questions.  I was too scared at times + fell behind.
+
+At least start every project and assignment when you first get it.
+They could take a while.
+
+At the very least, start the homeworks and/or project parts and
+understand what you have to do well in advance of the deadline.
+Also, attend lectures as the information is very useful on both
+homework and exams.
+
+Attend all classes and take lots of notes.
+
+Attend class, for real.  Since apparently not everything on eams is
+covered in the homework.  Operator overloading comes to mind.
+
+Attend it more often than I did :(
+
+Be careful with who you work with for the project.  Make sure you've
+programmed with them before, because it can really affect your
+learning habbit.  Also, code a lot in C/C++ during your free time, it
+will help since majority of students come from only knowing Java
+and/or Python.
+
+Be prepared to work, and do NOT put off assignments.  Also, seriously
+read the syllabus.
+
+C++ has some more challenging aspects, so pay attention.  Also, start
+earlier on the projects.
+
+Choose an IDE or text editor and get very familiar with it.  Use a
+Linux VM or set up dual boot, because it is much easier to test in
+Linux.
+
+Class is very helpful so make sure you go.  If the project is similar
+to what it is this year, make sure your code is pretty reusable, it
+will make future parts so much easier.  Don't be afraid to rewrite
+it.
+
+Come to class, and don't fall behind with the work
+
+Come to class.
+
+Come to lecture, don't do the project the night of, don't forget to
+push projects.  Try to understand why what is happening is happening
+don't just copy it.
+
+Communicate with your project members effectively!
+
+CprE 288 was easier
+
+DO NOT PROCRASTINATE.  At least start your ssignments the day which
+they are assigned.
+
+Definitely do not push projects off until the last day or two.  Your
+life will suck if you do.  Start projects a week or so in advance.
+
+Do NOT procrastinate the project, start each part ASAP.  Trust me, I
+learned this lesson the hard way.
+
+Do not procrastinate...
+
+Do not take this class if you have no experience in C & C++.  Avoid
+this class if not required.  Practice writing exams since it is
+difficult to do well otherwise.  Start HWs early.
+
+Do not take w other problem solving classes and work 40 hours a week
+at the same time your exam and final grade might look like mine :(
+
+Do your homework and projects.  Don't procrastinate.  If you do not
+know anything about C or C++, learn ahead.  Before any exams ask the
+lecturer to give review exercise or any practice exams to familiarize
+with the format and questions.
+
+Don't be afraid to ask questions, even if you think its a stupid one.
+Set aside an hour every day to work on each part of the project; it
+will help you stay on task, and not rush towards the end.
+
+Don't count on getting timely feedback about homework and project
+grades, just keep moving forward and don't give up.  Double check the
+feedback you get when it does come for mistakes: if you get a comment
+about something not compiling, try it yourself and tell the TAs how
+exactly you got it co compile.  Make mistakes, learn from them.  Stay
+on top of things.  Comminicate questions often.  Be persistent.
+
+Don't fall behind
+
+Don't fall behind on assignments.
+
+Don't procrastinate on assignments.  Showing up in class makes more
+sense content wise than reading lecture notes later.  Find an IDE
+that can do the heavy lifting for you.  Dr. Miner is an exception to
+being able to code w/o a linter / formal debugger.
+
+Don't take ComS/SE 309 with this course and start the projects early!
+
+Don't take it with 309, you might have to do the work of 2 or 3
+people if someone isn't contributing.
+
+Don't wait until a couple of days before due dates to start projects.
+It only increases the difficulty of a hard class.
+
+Expectations management in any group activity is seriously important.
+Having a good partner with mutual understanding of workload rocks.
+
+Geeksforgeeks and tutorialspoint are helpful websites.  Geeks for
+geeks has examples and tutorialspoint has a useful docomentation of
+standard C libraries.
+
+Give yourself about 24 hours with no breaks for the project.  Try not
+to procrastinate.
+
+Give yourself time for the projects!  Start right away, and if you
+aren't getting things figured out early, get help BEFORE it becomes a
+problem.
+
+Go to class and get a head start on projects.
+
+Go to class, do homework before deadline
+
+Go to class, start every homework assignment as early as you can.
+
+Go to lectures, and start HW/projects right away.  It's much easier
+to make mistakes and bad design choices if the project is started too
+late.
+
+I should have started the project early.  I did not do the first
+project and there was ample time to do the project but I did not use
+any of the time to do the project so that let me not do any project
+and now I am failing class because of my bad time management &
+procrastination.  I am taking this class again so I hope I start HW
+early and ask questions with Instructor & TA no matter how silly my
+question is.
+
+I would tell them to seek help as soon as they need it because it is
+very easy to get behind in this class
+
+If you already know some C or C++ just start project ASAP.
+
+If you haven't spent any time working with C or C++, then go back and
+take SE 185 to be more familiar with C programming.
+
+Implement concepts taight in class on your own.  This will build your
+understand and help you realize what you don't know so you can ask
+good questions.
+
+It is very important to start the projects + HWs as soon as possible!
+Sometimes they take a long time to understand + you might need to ask
+for help.
+
+It never lets up so don't let up towards the end of the semester.
+
+Learn C as fast as you can ("The C Programming Language" by Kernighan
+and Ritchie is really good.).  Then, start the project as soon as
+possible and plan for re-use of functionality/code.  Groups are good
+if your team mates aren't afraid of git.
+
+Learn pointers as in what they do and how to use them.
+
+Learn pointers in and out, and learn how to use a linked list.
+
+Learn to use a C debugger like GDB, as it'll save you a ton of
+headache.
+
+Make sure to devote the majority of your ftw time to this class.
+Good luck!
+
+Make sure to schedule time to work on the project regularly,
+especially if you work with a partner.  Use google frequently.
+
+Make sure to start the project parts early.  They are way more
+involved than the homeworks!
+
+Make sure to start your semester long project early and make sure you
+do each part right the first time
+
+Manage your time.  Do not try to start projects less than 2 days
+before they're due.
+
+Pay attention in class and enjoy it!  Andrew's lectures are engaging
+and actually very insightful.  I would suggest writing minimal notes
+and instead pay close attention to the in-class notes and examples.
+Then, after class you can re-read the notes from gitlab and write
+down your own.  Also, start the project parts and homework.  Some of
+homeworks aren't very difficult, so I would put them off and they
+would crepp up on me.  Stay ahead!
+
+Pay attention in class.  Go to class.  Write code often.  And, yes,
+start assignments when assigned, not 3 days before they're due.
+
+Please don't take this course together with CS 331 or CS 321 or
+CS311.
+
+Practice class material by coding it on your own.  Give yourself time
+for the project.
+
+Practice coding outside of the project and homeworks.  Extra practice
+is something I wish I did more of.
+
+Project deadlines should be treaded as absolute, despite the classes
+grading submission policy
+
+START YOUR PROJECTS EARLY PLEASE FOR THE LOVE OF GOD
+
+Since this class is changing from C/C++ to just C++ soon, I would say
+my biggest struggle was with pointers, so focus on pointers.  Also, I
+believe 321 may be a pre-req in the future as it will be the new C
+class, so have a handle on C as well.
+
+Spend a lot of time becoming comfortable w/pointers, they actually
+make things conceptually easier.
+
+Spend time "playing" with C/C++, attending lecture is great but you
+can't really learn the language without trying stuff yourself.  And
+there's not always homework over every single topic.
+
+Start all homeworks and projects early.  Do not wait till the last
+minute.
+
+Start doing project 2 weeks early before due day!
+
+Start early on the projects.  They can be harder than you think then
+you spend lots of hours the last few days trying to grind it out.
+Make a makefile even for the homeworks!
+
+Start everything (assignments and projects) as early as possible.
+Test all edge cases.  Share test cases and try out others' test
+cases.
+
+Start on projects and homeworks early.
+
+Start on the projects early and take time to plan for them!  Also put
+effort into writing quality code - even if you aren't graded for it.
+It will help in the end!
+
+Start projects early but acutally this time not like 228
+
+Start projects early.
+
+Start projects early.
+
+Start projects early.  Usually they are easy enough, however they
+still take time
+
+Start the homework as soon as it's assigned.  Design your project to
+be reusable.  Take the time to learn make and valgrind.
+
+Start the homework assignments the day they're *posted*
+
+Start the homework early and don't procrastinate.
+
+Start the parts of the project as early as you can.  Don't ignore C++
+because you are comfortable with C, C++ becomes important at the end
+of the class.
+
+Start the projects early!
+
+Start working on project early.  Refer to Geeks for Geeks or
+TutorialPoint.  C++ is not easy!  Go to professor for help!  TAs are
+crowded with student, and possibly would not be able to respond
+quickly due to the fact that they need to understand your code.
+
+Start your assignments at least three days earlier than when you
+would start ans assignment in another class.
+
+Start your project early, don't wait until the due date, also attend
+to the class.  You will save time by learning from the class instead
+of the web.
+
+Start your project or homework as soon as possible.
+
+Start your projects as soon as possible!  Show up to the start of
+every class at least to get attendance points.  Go to the coms
+helprool when needed.  As professor for help if you need it.
+
+Stay on top of the project!  And ask for help if you don't
+understand.  I had a hard time being motivated to work on the project
+after getting stuck, so set goals to circumvent that.  Also, don't
+bomb the midterm (like me).  (Or drop the class)
+
+Stay on top of the project.  Go to class, I missed 3 or 4 classes,
+and apparently all were attendance days.
+
+Students should write more C++ code if they are feeling rusty on it.
+Not practicing C++ enough may have ruined the final exam for me.
+
+Study C++ hard before the final because it is hard.  And start early
+on homework.
+
+Study ahead of time.
+
+Study before the class.
+
+Take advantage of homework assignments, which were in my opinion the
+"easiest" points in the class.  Start projects EARLY and think about
+design from the start.  Also, come to lecture because it is far more
+engaging and less boring than 227, 228, etc.
+
+The assignment opportunity to do project in C or C++ isn't really
+optional.  You need C++ experience for this test.
+
+This class spends half time placing emphasis on C.  It wouldn't hurt
+to delve into C++ more in your own time to further polish your own
+understanding on this language.
+
+To do all the homeworks & listen in class.  That is sufficient to be
+able to do well on the exams.  Project is an important part of the
+grade, so start early.
+
+Treat testing and debugging as its whole separate assignment with its
+own scheduled due dates.
+
+Understand that working in groups will require ample and clear
+communication, and maybe sometimes, it's better if you worked alone.
+The homeworks given in this class are achievable and very helpful to
+get yourself to learn in this class, but be aware that it can really
+drop your grade in this class if you're not careful.  Start all your
+work early.
+
+Use clion to code in C.  Debugging is awful, learn to do it properly
+though some IDE NOT vim.  Then again, possibly failed this test.
+Don't listen to me.
+
+WORK ON PROJECT + HWs EARLY
+
+Watch a quick video about GitLab if you're unsure / unfamiliarized,
+or, ask in the CS helproom.  Super helpful guys and girls willing to
+help.
+
+When he says to start on the projects early, actually do it.  They
+take a ton of time and can be confusing.
+
+Work early.  Pay attention to any lecture involving pointers.
+
+You can rush the projects on the last day, but you won't learn much
+from them.
+
+You might start out not enjoying C, but one you get to C++, things
+start to make a little more sense.  Oh, yeah, and watch out for
+malloc()
+
+You must go to this class!  It has lots of fun!
+

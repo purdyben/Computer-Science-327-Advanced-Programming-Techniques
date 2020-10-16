@@ -1,0 +1,13 @@
+Querying intbox: {3, 7, 11, 2}
+1: NO
+2: YES
+3: YES
+4: NO
+5: NO
+6: NO
+7: YES
+8: NO
+9: NO
+10: NO
+11: YES
+12: NO

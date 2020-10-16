@@ -1,0 +1,5 @@
+List is now: []
+List is now: [42]
+List is now: [42]
+List is now: [29, 37, 42]
+List is now: [29, 37, 42, 77, 99]

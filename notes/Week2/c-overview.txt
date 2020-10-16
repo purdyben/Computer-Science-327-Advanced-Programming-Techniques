@@ -1,0 +1,371 @@
+Quick overview of "entire" C language
+------------------------------------------------------------
+
+Quick primer on most of C
+
+Types:
+  void: no type
+
+  char
+  short or short int
+  int
+  long or long int
+
+      These are all integer types, with different ranges.
+      char: 1 byte, -128 ... 127
+
+      C lets you assign between these with no conversions.
+
+      int x = 'A';      /* Fine */
+      char y = 47;      /* fine */
+
+  Any integer type may be preceeded by "unsigned"
+      Then there cannot be negatives.
+
+
+  float : floating point value
+  double: double precision floating point value
+
+      C lets you assign between these
+
+
+Missing:
+    boolean: use char instead
+    string: these are arrays of characters in C
+
+
+User-defined types in C:
+
+  structs: a way to aggregate data together
+            like objects except:
+                no methods
+                all members are public
+
+  looks like this:
+
+  struct date {
+    short year;   /* -32768 through 32767 */
+    char month;   /* 1-12 */
+    char day;     /* 1-31 */
+  };
+    
+   ^ super important
+
+  In this example, "date" is called the "structure tag".
+
+  Then we might have later on:
+
+    int x;
+    struct date today;
+
+  BEWARE: x and today are completely uninitialized which means:
+    no guarantee whatsoever their values until we assign them.
+
+    today.year = 2020;
+    today.month = 1;
+    today.day = 23;
+
+  Structs can be nested if you like.
+
+
+We can make "aliases" for type names, using a "typedef"
+
+  * more descriptive names
+  * allow us to change types everywhere, easily, for instance
+
+Usage:
+
+  typedef  (however you would declare a variable of the type you
+            want, minus the name of the variable)     synonym;
+
+
+examples:
+
+  typedef int length_in_inches;
+  typedef int length_in_cm;
+
+  typedef struct date date_t;
+
+  Now I could do
+
+  date_t today;
+  length_in_inches height;
+  length_in_cm x;
+
+  height = x;
+  /* ^ this will compile just fine, no warnings */
+
+  height = today.year;
+
+
+Pointers:
+
+  In C we can have variables that are pointers to other things.
+  Pointers are essentially "addresses" of where stuff is stored.
+
+  Example:
+
+    pointer to an int: means this variable holds an address,
+                       and at that address is stored an integer.
+
+  To declare a pointer variable:
+
+      (the type that's pointed to)*
+
+  Examples:
+
+    int* p;     /* p is a pointer to an int */
+
+    char* x;    /* x is a pointer to a char */
+
+    struct date* todayp;  /* todayp is a pointer to a date struct */
+
+    double **y; /* y is a pointer to a (pointer to a double) */
+
+    char ***args;   /* pointer to pointer to pointer to char */
+
+
+  We can have:
+      pointers to structs
+      pointers in structs
+      pointers to pointers
+
+
+Arrays:
+    There are arrays in C:
+
+    int A[10];    /* declare an array of exactly 10 integers, named A */
+
+    Use this for fixed, known-size arrays.
+
+  
+    We can have:
+        arrays of arrays
+        arrays of structs
+        arrays of pointers
+
+    (type) variable[size]
+
+    double* strange[42];
+
+    DYNAMIC ARRAYS: later!!!!!!
+
+
+That's all!!!! YAY!
+
+
+Operators in C:
+
+  K&R page 53 gives complete list with precedence rules.
+
+
+  Comparisons:
+    ==, !=, >, <, >=, <=
+
+    Same as Java almost
+
+        x > 7   : in Java this is a boolean, true or false
+
+                : in C this is an int
+                  0 : false
+                  1 : true
+
+  Arithmetic:
+    +, -, *, /, % : same as Java?
+
+    int / int: gives an int, truncates fraction
+
+    int x;
+    double y;
+        
+        x+y;
+
+              i.e., compiler will "promote" types as needed
+              In this example, x+y will have type "double"
+
+    d = 'A' + 1;
+  
+
+    In C, d has value "ascii code of A plus 1" which is also "ascii code of B"
+
+
+    "Hello world!" + 1;
+
+      This will compile just fine but does not do what you think.
+
+
+  Logical operators:
+    
+    ! : not
+    && : and
+    || : or
+
+        (x<3) && (x>-7) && (y==x)
+
+    In C: order is guaranteed to be left to right in a sequence of ands
+          or a sequence of ors, and it is guaranteed to "short circuit"
+
+    This is important for example:
+
+    int A[50];
+    int i;
+
+    /* ... */
+
+    if ( (i>=0) && (i<50) && (A[i] != 7) ) {
+      /* This is safe! */
+    }
+
+
+Bitwise operators:
+
+  * may be applied to any integer type
+  * operate on the binary rep of the integers, as "arrays of bits"
+  
+  ~: one's complement (flip all bits)
+
+  &: bitwise and
+  |: bitwise or
+  ^: bitwise xor
+
+  <<: left shift (towards MSB or equivalent to multiply by 2)
+        new bits are 0
+  >>: right shift
+        unsigned: new bits are 0
+        signed: new bits are whatever is MSB
+        (same as divide by 2)
+
+  unsigned chars are usually 8 bits
+
+  unsigned char x = 0xa6;   /* 1010 0110 */
+  unsigned char y = 0x28;   /* 0010 1000 */
+
+
+  ~x: /* 0101 1001 */
+
+  x & y : /* 0010 0000 */
+  x | y : /* 1010 1110 */
+
+
+Assignments:
+  =
+
+  lvalue = rhs expression
+
+  lvalue: anything that can be assigned to.
+          (variables, array elements, etc.)
+
+  int x, y;
+
+  x = y + 1;
+
+  ^ lvalue
+      ^ rhs is something with compatible type
+
+  Fun fact: = is actually an operator and it returns a value.
+
+  z = (x = y+1);
+
+  z gets the same value that was assigned to x
+
+  a=b=c=d=0;
+
+  is associative from right to left
+
+  a=(b=(c=(d=0)));
+
+
+  Same deal for 
+    +=, -=, *=, /=, %=,
+    &=, |=, &&=, ||=, <<=, >>=
+    
+
+  is 
+    lvalue += rhs;
+
+  equivalent to
+    lvalue = lvalue + rhs;
+
+  NO because second one evaluates lvalue twice, and first evaluates lvalue
+      once.
+
+  BUT most of the time, that's the same.
+
+  Update operators have super low precedence.
+
+    x *= y+1;
+
+    means
+
+    x *= (y+1);
+
+Increment and decrement:
+
+  ++, --
+
+  ++x
+  x++
+
+  the diffence:
+    ++x says: increment x and then return the value
+    x++ says: return the value for x, and then increment it
+
+
+Super fun example in a separate file
+
+C does not specify the order in which
+
+  lhs = rhs
+
+is evaluated so : undefined behavior
+
+
+
+Ternary operator:
+
+  a ? b : c
+
+    this: evaluates a, if a is nonzero then evaluate b, otherwise evaluate c
+
+
+  max = (max > x) ? max : x;
+
+  printf( n ? "Hello" : "Goodbye");
+
+
+Pointer operators:
+
+  & : take the address of something
+
+        &x : gives me the address of variable x.
+             makes a pointer that points to x
+
+  * : dereference a pointer
+      (the opposite of &)
+
+        *x : give me the thing that x points to.
+
+  Example:
+
+  struct date {
+      short year;
+      char month;
+      char day;
+  };
+
+  struct date today;
+  
+  today.month = 12;
+  today.day = 25;
+
+  short* sptr;    /* sptr is pointer to short */
+
+  sptr = & today.year;    /* today.year is short so & today.year
+                              is pointer to short */
+
+
+
+  *sptr = 2019;
+  
+  /* dereference sptr, and store 2019 there. */
+

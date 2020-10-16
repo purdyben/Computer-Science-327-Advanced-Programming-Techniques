@@ -1,0 +1,27 @@
+#
+# Start of a game
+#
+RULES :
+turn 1
+unlimited
+FOUNDATIONS :
+_c
+3d
+_h
+As
+TABLEAU :
+3 h| 7 h 8 h Th Jc Ad Qs
+7 c 6 c 6 s 7 s 5 h | Ac
+7 d As Ks 8 c | Js
+Kd 9 s 6 h | 3 c
+Td Qc | 9 d
+2 h | Qh
+| 4 d
+STOCK :
+Jd 3 d Ac Kc 4 h 2 s Qd 6 d Kh 5 s 4 s Ah Ts 4 c 5 d
+2 d 9 c 9 h 2 c Jh 8 s 3 s 8 d |5 c
+MOVES :
+#
+# Lots of moves
+#
+4->1 

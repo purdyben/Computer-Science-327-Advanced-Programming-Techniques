@@ -1,0 +1,46 @@
+DEVELOPERS FILE
+
+Display
+	The desplay is made up of 4 sections each creating there own part of the screen, in turn everytime show game is called it will show the current state of the board. 
+
+	cards are made from a preset card from. This method is called every time there is a card in the data base. starting at the givin x,y.
+void create_card(int position_x, int position_y,char rank,char suit, int back);
+  
+
+void show_game(game_state *game){
+    //show rules;
+    show_rules(game,44,0);
+    //show foundations.
+    show_foundations(game,44,15);
+    //show stock;
+    show_stock(game,1,25);
+    //show table
+    show_table(game);
+}
+
+
+Moves:
+tb_poll_event(&event_action); handels getting an action. then depending on the char presses dictates the action 
+
+When a move happends the code updates data and then calles show_game to display the new game 
+
+Table selection screen 
+	when two number keys are pressed you are entered into table selection screen 
+	this allows you to select the card you want move to the selceted destination.
+	the currsor is shown by a red box and the destinations is also highlighted. 
+	
+	int select_card_t_t(game_state *state, int src_col, int dest_col);
+	void show_dest(game_state *state, int dest_col);
+	void show_selector(int col, int row);
+
+Random game:
+	random_game creates a random game with a 52 array of cards.
+	randomize shuffles the deck 
+	swap is used in randomize
+
+
+	game_state* random_game()		
+	void randomize (int arr[], int n)  
+	void swap (int *a, int *b)
+	
+

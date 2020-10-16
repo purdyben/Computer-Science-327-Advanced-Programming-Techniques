@@ -1,0 +1,19 @@
+RULES :
+turn 1
+unlimited
+FOUNDATIONS :
+Ac
+_d
+2 h
+3 s
+TABLEAU :
+Ad 7 d | 5 d 4 c 3 h #jee;;sdaksgkgssggsg
+| Ks Qh Jc Th 9 c 8 d 7 c 6 d 5 s 4 h 3 c 2 d
+|
+| Js Td 9 s 8 h 7 s 6 h 5 c 4 d
+| Kh Qs Jd Tc 9 d 8 c
+| Kc Qd
+| Kd Qc Jh Ts 9 h 8 s 7 h 6 s 5 h 4 s 3 d
+STOCK :
+ 2c |
+MOVES :
